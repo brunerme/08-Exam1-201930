@@ -123,13 +123,13 @@ def problem1(circle, rectangle, color, length, window):
     # -------------------------------------------------------------------------
     circle.attach_to(window)
     rectangle.attach_to(window)
-    window.render()
+    window.render(0.5)
     rect_midpoint = rectangle.get_center()
     line1 = rg.Line(circle.center, rect_midpoint)
     line1.color = color
     line1.thickness = circle.outline_thickness
     line1.attach_to(window)
-    window.render()
+    window.render(0.5)
     line_midpoint = line1.get_midpoint()
     point1 = rg.Point(line_midpoint.x, line_midpoint.y+(0.5*length))
     point2 = rg.Point(line_midpoint.x, line_midpoint.y-(0.5*length))
@@ -137,7 +137,7 @@ def problem1(circle, rectangle, color, length, window):
     line2.thickness = circle.outline_thickness + rectangle.outline_thickness
     line2.color = circle.fill_color
     line2.attach_to(window)
-    window.render()
+    window.render(0.5)
 
 
 # -----------------------------------------------------------------------------
