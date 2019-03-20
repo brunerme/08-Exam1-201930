@@ -91,7 +91,7 @@ def problem4(point1, point2, n, window):
     delta_x = (point2.x-point1.x)/((2*n)+1)
     delta_y = (point1.y-point2.y)/((2*n)+1)
 
-    line = rg.Line(point1,point2)
+    line = rg.Line(point1, point2)
     midpoint = line.get_midpoint()
     for k in range((2*n)):
         new_point = rg.Point(point1.x+(delta_x*(k+1)), point1.y-(delta_y*(k+1)))
